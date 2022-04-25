@@ -25,4 +25,12 @@ function colourTile(e) {
 }
 
 // Buttons
-clearButton.addEventListener("click", createTiles);
+clearButton.addEventListener("click", resetGrid);
+
+function resetGrid() {
+  tiles.forEach((tile) => {
+    if (tile.classList.contains("colored-tile")) {
+      tile.classList.remove("colored-tile");
+    }
+  });
+}
