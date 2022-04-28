@@ -11,11 +11,15 @@
   <body>
     <div class="header"><h1>Etch-a-Sketch</h1></div>
     <div class="content">
-      <div class="btn-controls">
-        <button type="button" class="btn-clear">Clear</button>
-        <button type="button" class="btn-gridsize">Change Gridsize</button>
-      </div>
       <div class="grid-container"></div>
+      <div class="controls">
+        <div class="slide-container">
+          <p>Change grid size:</p>
+          <input type="range" min="2" max="60" value="16" class="slider" />
+          <p>Size: <span class="slider-value"></span></p>
+        </div>
+        <div><button type="button" class="btn-clear">Clear</button></div>
+      </div>
     </div>
   </body>
 </html>

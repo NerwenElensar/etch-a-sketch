@@ -1,10 +1,9 @@
 const GRID_CONTAINER_SIZE = 450;
 const gridContainerUI = document.querySelector(".grid-container");
 const clearButton = document.querySelector(".btn-clear");
-
+const slider = document.querySelector(".slider");
+const output = document.querySelector(".slider-value");
 createTiles();
-const tiles = document.querySelectorAll(".tile");
-tiles.forEach((tile) => tile.addEventListener("mouseenter", colourTile));
 
 function createTiles(gridsize = 16) {
   //TO DO get gridsize from user
@@ -18,6 +17,9 @@ function createTiles(gridsize = 16) {
       gridContainerUI.appendChild(tile);
     }
   }
+  document
+    .querySelectorAll(".tile")
+    .forEach((tile) => tile.addEventListener("mouseenter", colourTile));
 }
 
 function colourTile(e) {
@@ -28,9 +30,25 @@ function colourTile(e) {
 clearButton.addEventListener("click", resetGrid);
 
 function resetGrid() {
+  const tiles = document.querySelectorAll(".tile");
   tiles.forEach((tile) => {
     if (tile.classList.contains("colored-tile")) {
       tile.classList.remove("colored-tile");
     }
   });
+}
+
+// Slider
+output.innerText = `${slider.value}x${slider.value}`;
+slider.addEventListener("input", () => {
+  output.innerText = `${slider.value}x${slider.value}`;
+  removeTiles();
+  createTiles(slider.value);
+});
+
+function removeTiles() {
+  if (gridContainerUI.hasChildNodes) {
+    const tiles = Array.from(gridContainerUI.children);
+    tiles.forEach((tile) => gridContainerUI.removeChild(tile));
+  }
 }

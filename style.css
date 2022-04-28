@@ -12,20 +12,15 @@ body {
 }
 
 button {
-  width: 60%;
-  margin-top: 16px;
+  width: 150px;
   padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 1rem;
 }
 
 h1 {
-  font-size: 64px;
-  padding-bottom: 54px;
-}
-
-.content {
-  display: flex;
-  width: 100%;
-  gap: 50px;
+  font-size: 4.5rem;
+  padding-bottom: 5%;
 }
 
 .grid-container {
@@ -37,7 +32,7 @@ h1 {
 }
 
 .tile {
-  border: solid 1px red;
+  border: solid 1px rgb(85, 76, 76);
   flex: 0 1 auto;
 }
 
@@ -45,12 +40,18 @@ h1 {
   background-color: black;
 }
 
-.btn-controls{
-  height: 200px;
-  width: 30%;
+.controls{
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 10%;
+  margin: 5% 0;
+}
+
+.slide-container {
+  text-align: center;
+}
+
+.slider {
+  accent-color: rgb(85, 76, 76);
 }
