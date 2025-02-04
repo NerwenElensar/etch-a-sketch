@@ -10,3 +10,12 @@ body {
 	flex-wrap: wrap;
 	border: solid black 2px;
 }
+
+.pixel {
+	width: 23px;
+	border: solid red 0.5px;
+}
+
+.colored {
+	background-color: palegreen;
+}
