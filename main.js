@@ -32,8 +32,14 @@ function drawGrid(gridSize = 16) {
     pixel.style.height = pixelSize + "px";
     pixel.classList.add("pixel");
     canvas.appendChild(pixel);
-    pixel.addEventListener("mouseover", () => pixel.classList.add("colored"));
+    pixel.addEventListener("mouseover", () => {
+      pixel.style.backgroundColor = `rgb(${randomRGBValue()}, ${randomRGBValue()}, ${randomRGBValue()})`;
+    });
   }
+}
+
+function randomRGBValue() {
+  return Math.floor(Math.random() * 255);
 }
 
 drawGrid();
