@@ -19,5 +19,6 @@ h1 {
 }
 
 .pixel { 
+	box-sizing: border-box;
 	border: solid rgba(42, 35, 35, 0.109) 0.5px;
 }

@@ -29,10 +29,10 @@ function removeCurrentGrid() {
 }
 
 function drawGrid(gridSize = 16) {
-  const border = 2;
+  //const border = 2;
   let pixelAmount = gridSize * gridSize;
   let canvasWidth = canvas.clientWidth;
-  let pixelSize = canvasWidth / gridSize - border;
+  let pixelSize = canvasWidth / gridSize;
 
   for (let i = 0; i < pixelAmount; i++) {
     const pixel = document.createElement("div");
