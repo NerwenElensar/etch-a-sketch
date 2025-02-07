@@ -4,6 +4,11 @@ body {
 	align-items: center;
 	gap: 24px;
 }
+
+h1 {
+	margin-bottom: 0;
+}
+
 .canvas {
 	display: flex;
 	flex-grow: 1;
@@ -14,9 +19,5 @@ body {
 }
 
 .pixel { 
-	border: solid grey 0.5px;
-}
-
-.colored {
-	background-color: black;
+	border: solid rgba(42, 35, 35, 0.109) 0.5px;
 }

@@ -1,7 +1,9 @@
 const canvas = document.querySelector(".canvas");
 const gridSizeBtn = document.querySelector("#grid-size-btn");
+const cleanBtn = document.querySelector("#clean-btn");
 
 gridSizeBtn.addEventListener("click", adjustGrid);
+cleanBtn.addEventListener("click", cleanCanvas);
 
 function adjustGrid() {
   let gridSize = prompt(
@@ -12,6 +14,12 @@ function adjustGrid() {
     removeCurrentGrid();
     drawGrid(parseInt(gridSize));
   }
+}
+
+function cleanCanvas() {
+  let pixelList = document.querySelectorAll(".pixel");
+
+  pixelList.forEach((pixel) => (pixel.style.backgroundColor = "white"));
 }
 
 function removeCurrentGrid() {
