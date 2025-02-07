@@ -2,20 +2,21 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 24px;
 }
 .canvas {
 	display: flex;
-	width: 400px;
-	height: 400px;
+	flex-grow: 1;
+	width: 640px;
+	height: 640px;
 	flex-wrap: wrap;
 	border: solid black 2px;
 }
 
-.pixel {
-	width: 23px;
-	border: solid red 0.5px;
+.pixel { 
+	border: solid grey 0.5px;
 }
 
 .colored {
-	background-color: palegreen;
+	background-color: black;
 }
